@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.FirstFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/f_fragment_guideline_start"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/dimen_16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/f_fragment_guideline_end"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/dimen_16dp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/f_fragment_timer_card_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            app:cardCornerRadius="@dimen/dimen_16dp"
+            app:cardElevation="@dimen/dimen_16dp"
+            app:layout_constraintEnd_toEndOf="@id/f_fragment_guideline_end"
+            app:layout_constraintStart_toStartOf="@id/f_fragment_guideline_start"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_gradient_background">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/f_fragment_timer_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:elevation="@dimen/dimen_16dp"
+                    android:gravity="center"
+                    android:text="@string/are_you_ready_for_exams"
+                    app:layout_constraintVertical_chainStyle="packed"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/f_fragment_timer_hour_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_8dp"
+                    android:background="@drawable/shape_timer_background"
+                    tools:text="0"
+                    android:textSize="@dimen/dimen_24sp"
+                    android:textStyle="bold"
+                    android:layout_margin="@dimen/dimen_3dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/f_fragment_timer_hour_2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/f_fragment_timer_label" />
+
+                <TextView
+                    android:id="@+id/f_fragment_timer_hour_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_8dp"
+                    android:background="@drawable/shape_timer_background"
+                    tools:text="0"
+                    android:textSize="@dimen/dimen_24sp"
+                    android:textStyle="bold"
+                    android:layout_margin="@dimen/dimen_3dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/f_fragment_timer_dots_1"
+                    app:layout_constraintStart_toEndOf="@id/f_fragment_timer_hour_1"
+                    app:layout_constraintTop_toBottomOf="@id/f_fragment_timer_label" />
+
+                <TextView
+                    android:id="@+id/f_fragment_timer_dots_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_8dp"
+                    android:text="@string/timer_dot"
+                    android:textSize="@dimen/dimen_24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/f_fragment_timer_minutes_1"
+                    app:layout_constraintStart_toEndOf="@id/f_fragment_timer_hour_2"
+                    app:layout_constraintTop_toBottomOf="@id/f_fragment_timer_label" />
+
+                <TextView
+                    android:id="@+id/f_fragment_timer_minutes_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_8dp"
+                    tools:text="0"
+                    android:textSize="@dimen/dimen_24sp"
+                    android:layout_margin="@dimen/dimen_3dp"
+                    android:textStyle="bold"
+                    android:background="@drawable/shape_timer_background"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/f_fragment_timer_minutes_2"
+                    app:layout_constraintStart_toEndOf="@id/f_fragment_timer_dots_1"
+                    app:layout_constraintTop_toBottomOf="@id/f_fragment_timer_label" />
+
+                <TextView
+                    android:id="@+id/f_fragment_timer_minutes_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:background="@drawable/shape_timer_background"
+                    android:padding="@dimen/dimen_8dp"
+                    tools:text="0"
+                    android:textSize="@dimen/dimen_24sp"
+                    android:textStyle="bold"
+                    android:layout_margin="@dimen/dimen_3dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/f_fragment_timer_dots_2"
+                    app:layout_constraintStart_toEndOf="@id/f_fragment_timer_minutes_1"
+                    app:layout_constraintTop_toBottomOf="@id/f_fragment_timer_label" />
+
+                <TextView
+                    android:id="@+id/f_fragment_timer_dots_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_8dp"
+                    android:text="@string/timer_dot"
+                    android:textSize="@dimen/dimen_24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/f_fragment_timer_seconds_1"
+                    app:layout_constraintStart_toEndOf="@id/f_fragment_timer_minutes_2"
+                    app:layout_constraintTop_toBottomOf="@id/f_fragment_timer_label" />
+
+                <TextView
+                    android:id="@+id/f_fragment_timer_seconds_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_8dp"
+                    android:background="@drawable/shape_timer_background"
+                    tools:text="0"
+                    android:textSize="@dimen/dimen_24sp"
+                    android:textStyle="bold"
+                    android:layout_margin="@dimen/dimen_3dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/f_fragment_timer_seconds_2"
+                    app:layout_constraintStart_toEndOf="@id/f_fragment_timer_dots_2"
+                    app:layout_constraintTop_toBottomOf="@id/f_fragment_timer_label" />
+
+                <TextView
+                    android:id="@+id/f_fragment_timer_seconds_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_8dp"
+                    android:layout_margin="@dimen/dimen_3dp"
+                    android:background="@drawable/shape_timer_background"
+                    tools:text="0"
+                    android:textSize="@dimen/dimen_24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/f_fragment_timer_seconds_1"
+                    app:layout_constraintTop_toBottomOf="@id/f_fragment_timer_label" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:text="@string/hours"
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@id/f_fragment_timer_hour_1"
+                    app:layout_constraintStart_toStartOf="@id/f_fragment_timer_hour_1"
+                    app:layout_constraintEnd_toEndOf="@id/f_fragment_timer_hour_2"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:text="@string/minutes"
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@id/f_fragment_timer_minutes_1"
+                    app:layout_constraintStart_toStartOf="@id/f_fragment_timer_minutes_1"
+                    app:layout_constraintEnd_toEndOf="@id/f_fragment_timer_minutes_2"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:text="@string/seconds"
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@id/f_fragment_timer_seconds_1"
+                    app:layout_constraintStart_toStartOf="@id/f_fragment_timer_seconds_1"
+                    app:layout_constraintEnd_toEndOf="@id/f_fragment_timer_seconds_2"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/f_fragment_classes_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:text="@string/classes"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/dimen_24sp"
+            app:layout_constraintStart_toStartOf="@id/f_fragment_guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/f_fragment_timer_card_view" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/f_fragment_to_day_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:textColor="#686868"
+            android:textSize="@dimen/dimen_16sp"
+            app:layout_constraintBottom_toBottomOf="@id/f_fragment_classes_text_view"
+            app:layout_constraintEnd_toEndOf="@id/f_fragment_guideline_end"
+            tools:text="6 classes to day" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/f_fragment_classes_recycler"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="@id/f_fragment_guideline_end"
+            app:layout_constraintStart_toStartOf="@id/f_fragment_guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/f_fragment_classes_text_view"
+            tools:listitem="@layout/item_classes" />
+
+        <TextView
+            android:id="@+id/f_fragment_home_work_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:text="@string/homework"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/dimen_24sp"
+            app:layout_constraintStart_toStartOf="@id/f_fragment_guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/f_fragment_classes_recycler" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/f_fragment_home_work_recycler"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="@id/f_fragment_guideline_end"
+            app:layout_constraintStart_toStartOf="@id/f_fragment_guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/f_fragment_home_work_text_view"
+            tools:listitem="@layout/item_home_work" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

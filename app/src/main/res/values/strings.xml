@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">GB_HW_Les_4</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="bottom_view_icon_firstFragment_title">Table</string>
+    <string name="bottom_view_icon_secondFragment_title">Lessons</string>
+    <string name="bottom_view_icon_thirdFragment_title">Home works</string>
+    <string name="menu_item_firstfragment_search_text">search</string>
+    <string name="menu_item_firstfragment_checked_text">Checked list</string>
+    <string name="menu_item_firstfragment_avatar_text">Account</string>
+    <string name="menu_item_fsecondragment_list_text">Table list</string>
+    <string name="menu_item_secondfragment_options_text">Options</string>
+    <string name="thirdFragment_label">Home works</string>
+    <string name="secondFragment_label">Lessons</string>
+    <string name="firstFragment_label">Hi, User name</string>
+    <string name="are_you_ready_for_exams">Are you ready for exams?</string>
+    <string name="classes">Classes</string>
+    <string name="homework">Homework</string>
+    <string name="open_in">Open in</string>
+    <string name="timer_dot">:</string>
+    <string name="hours">Hours</string>
+    <string name="minutes">Minutes</string>
+    <string name="seconds">Seconds</string>
+</resources>
